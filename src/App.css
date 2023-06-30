@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 32px;
+  @apply font-ysabeau;
+  @apply bg-white;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__large-circle {
+  animation: rotateLarge 5s infinite linear;
+}
+
+.contact__small-circle {
+  animation: rotateSmall 2s infinite linear;
+
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-400 !important;
+}
+
+.order-block:hover .order-block__wrapper {
+  transform: translateY(0%);
+}
+
+@keyframes rotateLarge {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateSmall {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) ;
+  }
+}
